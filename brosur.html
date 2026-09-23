@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Kegiatan Kampus</title>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Pendaftaran Kegiatan Kampus</h1>
+    <p>Sistem Pendaftaran Seminar, Workshop, dan Pelatihan Mahasiswa</p>
+  </header>
+
+  <!-- NAVIGASI -->
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#kegiatan">Kegiatan</a>
+    <a href="#jadwal">Jadwal</a>
+    <a href="#pendaftaran">Pendaftaran</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- SECTION BERANDA -->
+    <section id="beranda">
+      <h2>Selamat Datang</h2>
+      <p>
+        Halaman ini digunakan untuk pendaftaran berbagai kegiatan kampus,
+        seperti seminar, workshop, pelatihan, webinar, kompetisi, dan
+        kegiatan organisasi mahasiswa.
+      </p>
+
+      <figure>
+        <img src="images/kampus.jpg" alt="Gedung kampus" width="500">
+        <figcaption>
+          Gedung kegiatan kampus untuk seminar dan workshop mahasiswa.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- SECTION KEGIATAN -->
+    <section id="kegiatan">
+      <h2>Daftar Kegiatan</h2>
+
+      <article>
+        <h3>Seminar Teknologi Informasi</h3>
+        <p>
+          Seminar tentang perkembangan teknologi informasi dan
+          implementasinya di dunia industri.
+        </p>
+        <p>
+          Informasi lebih lanjut:
+          <a href="https://www.perbanas.ac.id" target="_blank" rel="noopener noreferrer">
+            Kunjungi Website UHN Perbanas
+          </a>
+        </p>
+      </article>
+
+      <article>
+        <h3>Workshop Pengembangan Web</h3>
+        <p>
+          Workshop praktik membuat website menggunakan HTML semantik
+          dan struktur HTML5.
+        </p>
+        <p>
+          <a href="#pendaftaran">Daftar Sekarang</a>
+        </p>
+      </article>
+
+      <article>
+        <h3>Pelatihan Sains Data</h3>
+        <p>
+          Pelatihan dasar analisis data menggunakan tools yang
+          relevan untuk mahasiswa.
+        </p>
+      </article>
+
+      <figure>
+        <img src="images/laboratorium.jpg" alt="Laboratorium komputer" width="500">
+        <figcaption>
+          Laboratorium komputer Program Studi Sistem Informasi.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- SECTION JADWAL -->
+    <section id="jadwal">
+      <h2>Jadwal Kegiatan</h2>
+
+      <table border="1">
+        <caption>Jadwal Kegiatan Kampus</caption>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Waktu</th>
+            <th>Nama Kegiatan</th>
+            <th>Pemateri / Penanggung Jawab</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>10 September 2026</td>
+            <td>Seminar Teknologi Informasi</td>
+            <td>Andi Pratama</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>15 September 2026</td>
+            <td>Workshop Pengembangan Web</td>
+            <td>Siti Aisyah</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>20 September 2026</td>
+            <td>Pelatihan Sains Data</td>
+            <td>Budi Santoso</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Total 3 Kegiatan</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- ASIDE -->
+    <aside>
+      <h2>Pengumuman</h2>
+      <p>
+        Batas pendaftaran kegiatan adalah 30 September 2026.
+      </p>
+      <p>
+        <time>2026-09-30</time>
+      </p>
+    </aside>
+
+    <!-- SECTION FORMULIR PENDAFTARAN -->
+    <section id="pendaftaran">
+      <h2>Formulir Pendaftaran</h2>
+
+      <form action="proses.php" method="post">
+
+        <div>
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required>
+        </div>
+
+        <div>
+          <label for="nim">NIM</label>
+          <input type="text" id="nim" name="nim" required>
+        </div>
+
+        <div>
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="telepon">Nomor Telepon</label>
+          <input type="text" id="telepon" name="telepon" required>
+        </div>
+
+        <div>
+          <label for="prodi">Program Studi</label>
+          <select id="prodi" name="prodi">
+            <option value="">-- Pilih Program Studi --</option>
+            <option value="si">Sistem Informasi</option>
+            <option value="ti">Teknik Informatika</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Jenis Kelamin</legend>
+
+          <input type="radio" id="laki-laki" name="jenis_kelamin" value="L">
+          <label for="laki-laki">Laki-laki</label>
+
+          <input type="radio" id="perempuan" name="jenis_kelamin" value="P">
+          <label for="perempuan">Perempuan</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pilihan Sesi</legend>
+
+          <input type="checkbox" id="sesi1" name="sesi[]" value="sesi1">
+          <label for="sesi1">Sesi 1 - Seminar</label>
+
+          <input type="checkbox" id="sesi2" name="sesi[]" value="sesi2">
+          <label for="sesi2">Sesi 2 - Workshop</label>
+
+          <input type="checkbox" id="sesi3" name="sesi[]" value="sesi3">
+          <label for="sesi3">Sesi 3 - Pelatihan</label>
+        </fieldset>
+
+        <div>
+          <label for="alasan">Alasan Mengikuti Kegiatan</label>
+          <textarea id="alasan" name="alasan" rows="4" cols="40"></textarea>
+        </div>
+
+        <fieldset>
+          <legend>Persetujuan</legend>
+
+          <input type="checkbox" id="setuju" name="setuju" value="ya" required>
+          <label for="setuju">Saya menyetujui ketentuan kegiatan</label>
+        </fieldset>
+
+        <button type="submit">Daftar</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Program Studi Sistem Informasi</p>
+  </footer>
+
+</body>
+</html>
